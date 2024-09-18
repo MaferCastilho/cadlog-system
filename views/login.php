@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        
         <form action="" method="post">
             <section>
                 <label for="email">Email</label>
