@@ -3,4 +3,4 @@
     require 'routes.php'
 ?>
 
-<!-- index só vai chmar o arquivo de rotas -->
+<!-- index só vai chamar o arquivo de rotas -->
