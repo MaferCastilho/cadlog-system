@@ -14,7 +14,7 @@ class Database{
             $password   = '';
 
             // A conexão usa o drive Mysql (mysql:) e as informações de host e BD
-            self::$instance = new PDO("msql:host=$host; dbname=$db", $user, $password);
+            self::$instance = new PDO("mysql:host=$host;dbname=$db", $user, $password);
 
             // Define o modo de erro para execuções, facilitando a depuração e tratamento dos erros
             self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
