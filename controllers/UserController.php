@@ -16,7 +16,7 @@ class UserController
             User::create($data); // vai pegar tudo que está dentro do Array e subistuir o que tem em user.php
             header('Location: index.php');
         }else{
-            include 'views/resgister.php';
+            include 'views/register.php';
         }
 
     }
