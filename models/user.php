@@ -33,7 +33,6 @@ class User
         $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha, perfil)  VALUES (:nome, :email, :senha, :perfil)");                                   // VALUES quais valores vão entrar na tabela
         $stmt->execute($data);
     }
-
     // Função para buscar todos os usuários da base de dados
     public static function all(){
         $conn = Database::getConnection();
