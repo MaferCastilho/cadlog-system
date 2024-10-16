@@ -19,7 +19,7 @@
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha">
             </section><br>
-            <button class="glow-on-hover" type="button">Login</button><br>
+            <button class="glow-on-hover" type="submit">Login</button><br>
         </form>
         <a href="index.php?action=register">Cadastre-se</a>
     </main>

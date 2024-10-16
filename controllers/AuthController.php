@@ -23,12 +23,17 @@ class AuthController
 
                 header('Location: index.php?action=dashboard');
             }else{
-                include 'views/resgister.php';
+                include 'views/register.php';
             }
         }else{
             include 'views/login.php';
         }
     }
+    public function logout(){
+        session_start();
+        session_destroy();
+        header('location: index.php');
+      }
 }
 
 ?>

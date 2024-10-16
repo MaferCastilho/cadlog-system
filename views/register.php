@@ -28,7 +28,7 @@
             </select>
             
             <button type="submit">Cadastrar</button>
-        </form>
+        </form>  
         <a href="index.php?action=login">Voltar ao Login</a>
     </div>
 </body>
