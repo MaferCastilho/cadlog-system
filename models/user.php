@@ -30,7 +30,7 @@ class User
     // Pode usar o mesmo nome da variavel dentro de cada função diferente 
     static public function create($data){
         $conn = Database::getConnection();
-        $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha, perfil)  VALUES (:nome, :email, :senha, :perfil)");                                   // VALUES quais valores vão entrar na tabela
+        $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha, perfil)  VALUES (:nome, :email, :senha, :perfil)");  // VALUES quais valores vão entrar na tabela
         $stmt->execute($data);
     }
     // Função para buscar todos os usuários da base de dados
@@ -39,6 +39,24 @@ class User
         $stmt = $conn->query("SELECT * FROM usuarios");
         // Retorna todos os usuários com um array associativo
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Função responsável pela atualização dos dados dos usuários na base de dados
+    public static function update($id, $data){
+        $conn = Database::getConnection();
+        // Prepara uma consulta SQL para atualizar, nome, email e perfil com base no ID do usuário
+        $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil WHERE id = :id"); // somente os campos que tem no cadastro do usuário
+
+        $data['id'] = $id;
+
+        $stmt->execute($data);
+    }
+
+    // Função para excluir o usuário da base de dados pelo ID
+    public static function delete ($id){
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
+        $stmt->execute(['id' => $id]);
     }
 }
 ?>
