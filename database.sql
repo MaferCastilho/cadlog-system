@@ -1,7 +1,7 @@
-CREATE DATABASE sistema_usuarios;
- 
-USE sistema_usuarios;
- 
+CREATE DATABASE sistema_usuarios_3a;
+
+USE sistema_usuarios_3a;
+
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
