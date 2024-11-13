@@ -8,7 +8,7 @@
    
 # ⚙️Funções
 ![imagem info](Gravando.gif)
-<br>
+<br>  
 
 # 💻tecnologias utilizadas
     🟢PHP  
